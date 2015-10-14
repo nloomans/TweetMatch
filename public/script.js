@@ -1,27 +1,5 @@
 "use strict";
 
-function gererateJson (data) {
-  window.data = data;
-  console.log(data);
-  console.log(typeof data);
-  var json = {}
-
-  // get the big 5 values and put them in a nice json
-  for (var i = 0; i < data.length; i++) {
-    if (data[i].title && data[i].value != "") { // is it one of the big 5?
-      console.log(data[i]);
-      console.log(data[i].id);
-      json[data[i].id] = Number(
-        data[i].value
-        .substring(0,data[i].value.length-1) // remove the % at the end
-      ) * 0.01; // turn it intro a factor
-    }
-  }
-
-  console.log(json);
-  return json;
-}
-
 function percentage(factor) {
   return Math.round(factor*100).toString()+"%";
 }
@@ -37,6 +15,8 @@ $(document).ready(function () {
       dataType: "json",
       data: { username: $("#input").val().substring(1), addToDatabase: $("#addToDatabase").is(":checked") }
     }).done(function (data) {
+      // TODO: skip this is we added to database.
+      // TODO: only remove scrollbar when showing the load icon.
       console.log(data);
       window.data = data;
       $('.percentage').text(percentage(data.match.percentage));
@@ -63,7 +43,4 @@ $(document).ready(function () {
     });
     return false;
   });
-
-  $()
-
 });

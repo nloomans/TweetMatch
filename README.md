@@ -1,25 +1,30 @@
-# Node.js Starter Application
+# TweetMatch
 
-Bluemix provides a Node.js starter application as a template so that you can
-add your code and push the changes back to the Bluemix environment.
+## install
+1. create a [bluemix](http://console.eu-gb.bluemix.net) account
+2. create a note.js web app.
+3. clone this repo `git clone [this repo url]`
+4. follow there instructions form stap 3 to 5.
+6. go to [twitter apps](https://apps.twitter.com/) and create an app
+7. open the app and click on *Keys and Access Tokens* then click on Generate *Consumer Key and Secret*
+5. create a credentials.json, it will look like this:
+		{
+			"twitter": {
+				"consumer_key": "<your twitter consumer_key>",
+				"consumer_secret": "<your twitter consumer_secret>",
+				"access_token_key": "<your twitter access_token_key>",
+				"access_token_secret": "<your twitter access_token_secret>"
+			},
+			"bluemix": {
+				"version": "v2",
+				"username": "<your bluemix username> (NOT the same as your login username!)",
+				"password": "<your bluemix password> (NOT the same as your login password!)"
+			},
+			"cloudant": {
+				"url": "<cloadant url>"
+			}
+		}
+	you can get the bluemix and cloudant credentials by going to "Environment Variables" in bluemix.
 
-## Files
-
-The Node.js starter application has files as below:
-
-* app.js
-
-	This file contains the server side JavaScript code for your application
-	written using the express server package.
-
-* public/
-
-	This directory contains public resources of the application, that will be
-	served up by this server
-
-* package.json
-
-	This file contains metadata about your application, that is used by both
-	the `npm` program to install packages, but also Bluemix when it's
-	staging your application.  For more information, see:
-	<https://docs.npmjs.com/files/package.json>
+6. addid the `manifest.yml` to fit your app
+6. type `cf push [app name]`
