@@ -3,7 +3,7 @@
 ## install
 1. create a [bluemix](http://console.eu-gb.bluemix.net) account
 2. create a note.js web app.
-3. clone this repo `git clone [this repo url]`
+3. clone this repo `git clone https://github.com/nloomans/TweetMatch.git`
 4. follow there instructions form stap 3 to 5.
 6. go to [twitter apps](https://apps.twitter.com/) and create an app
 7. open the app and click on *Keys and Access Tokens* then click on Generate *Consumer Key and Secret*
