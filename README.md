@@ -5,9 +5,12 @@
 2. create a note.js web app.
 3. clone this repo `git clone https://github.com/nloomans/TweetMatch.git`
 4. follow there instructions form stap 3 to 5.
-6. go to [twitter apps](https://apps.twitter.com/) and create an app
-7. open the app and click on *Keys and Access Tokens* then click on Generate *Consumer Key and Secret*
-5. create a credentials.json, it will look like this:
+5. go to overview > add a service or API
+6. add persenelety insights and Personality Insights and Cloudant NoSQL DB
+7. launch Cloudant and create the `tweetmatch` database
+7. go to [twitter apps](https://apps.twitter.com/) and create an app
+8. open the app and click on *Keys and Access Tokens* then click on Generate *Consumer Key and Secret*
+9. create a credentials.json, it will look like this:
 	```
 	{
 		"twitter": {
@@ -28,5 +31,5 @@
 	```
 	you can get the bluemix and cloudant credentials by going to "Environment Variables" in bluemix.
 
-6. addid the `manifest.yml` to fit your app
-6. type `cf push [app name]`
+10. edit the `manifest.yml` to fit your app
+11. type `cf push [app name]`
