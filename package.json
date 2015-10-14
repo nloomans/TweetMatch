@@ -9,7 +9,9 @@
 		"express": "4.12.x",
 		"cfenv": "1.0.x",
 		"twitter": "1.2.x",
-		"body-parser": "1.14.x"
+		"body-parser": "1.14.x",
+		"watson-developer-cloud": "^0.10.4",
+		"cloudant": "1.3.x"
 	},
 	"repository": {},
 	"engines": {

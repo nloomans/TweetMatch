@@ -12,24 +12,49 @@
   </head>
 
   <body>
-    <table>
-      <tr>
-        <td style= "width:30%;">
-          <img class = "newappIcon" src="images/newapp-icon.png">
-        <td>
-            <h1>Hi there!</h1>
-          <p>
-            Ever worderd with seleberty is most like you? Lets find out!
-            <form>
-              <input id="input" type="text" placeholder="@twitter_name" />
+    <div class="selectUser">
+      <table class="main">
+        <tr>
+          <td style="width:30%;">
+            <img class="newappIcon" src="images/logo.svg">
+          </td>
+          <td>
+              <h1>Hi there!</h1>
+              <p>
+                Ever wondered with celebrity is most like you? Lets find out!
+                <form>
+                  <input id="input" type="text" placeholder="@twitter_name" />
 
-              <div class="submit_container">
-                <div class="grow"></div>
-                <input type="submit" />
-              </div>
-            </form>
-          </p>
-    </table>
+                  <div class="submit_container">
+                    <a href="#" id="clearDB">clear database</a>
+                    <div class="grow"></div>
+                    <label style="margin: 10px;"><input type="checkbox" name="checkbox" value="value" id="addToDatabase"><span>Add to database</span></label>
+                    <input type="submit" />
+                    </div>
+                </form>
+              </p>
+            </td>
+        </tr>
+        <tr class="result" style="display: none;">
+          <td></td>
+          <td>
+            <h1>You are <strong class="percentage">74%</strong> like <strong class="twitterUrl"><a href="https://twitter.com/BarackObama">@BarackObama</a></strong></h1>
+            <table class="score">
+              <tr>
+                <td>Name</td>
+                <td>You</td>
+                <td>Him</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="loader">
+      <!-- matirial spinner -->
+      <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+        <circle class="circle" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+      </svg>
+    </div>
   </body>
-
 </html>
